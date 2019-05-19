@@ -29,7 +29,7 @@ def get_job_url(what = WHAT, where = WHERE, start = 0):
 
 def get_viewjob_url(jk):
 	"""Return the URL of the Indeed *view job* query."""
-	return 'https://www.indeed.co.uk/viewjob?jk=' + jk
+	return 'https://www.indeed.co.uk/restaurant-jobs-in-England' + jk
 
 
 def get_job_soup(what = WHAT, where = WHERE, start = 0):
@@ -85,7 +85,7 @@ def scrape_single_page(what = WHAT, where = WHERE, start = 0):
 		# `search_ad_url`
 		# `ad_url`
 		for content in job.find_all('a', {'class': 'turnstileLink'}):
-			search_ad_url = 'https://www.indeed.hk' + content['href']
+			search_ad_url = 'https://www.indeed.co.uk' + content['href']
 			job_data['search_ad_url'] = search_ad_url
 
 			try:
