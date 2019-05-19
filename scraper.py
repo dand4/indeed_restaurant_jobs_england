@@ -124,10 +124,10 @@ def get_start_range(what = WHAT, where = WHERE):
 	# Scrape the search count string from Indeed job page.
 	for content in job_soup.find_all('div', {'id': 'searchCount'}):
 		search_count = content.text.lstrip()
-
+	#problem area:
 	# Extract total number of jobs found from the search_count string.
-	pattern = r'\s[0-9]+$'
-	total_jobs = int(re.findall(pattern, search_count)[0].lstrip())
+	# pattern = r'\s[0-9]+$'
+	# total_jobs = int(re.findall(pattern, search_count)[0].lstrip())
 
 	# Set start range.
 	start_range = list(np.arange(0, total_jobs, 10))
@@ -138,8 +138,8 @@ def get_start_range(what = WHAT, where = WHERE):
 
 def scrape_all_pages(what = WHAT, where = WHERE):
 	# TODO: docstring
-
-	start_range = get_start_range(what, where)
+# problem line:
+	# start_range = get_start_range(what, where)
 
 	all_job_data = defaultdict(str)
 
@@ -167,8 +167,8 @@ def write_to_db(data):
 def scrape_indeed(what=WHAT, where=WHERE, record_csv=RECORD_CSV, record_db=RECORD_DB):
 
 	print("Starting to scrape Indeed: {0} in {1}.".format(what, where))
-
-	data = scrape_all_pages(what, where)
+#problem line:
+	# data = scrape_all_pages(what, where)
 	scrape_date = EXECTIME.strftime("%Y%m%d")
 
 	if record_csv:
