@@ -1,5 +1,5 @@
 import scraperwiki
-from bs4 import BeautifulSoup
+import BeautifulSoup
 import requests as rqs
 from datetime import datetime
 import time
