@@ -7,3 +7,7 @@
 
 lxml==3.4.4
 cssselect==0.9.1
+unicodecsv==0.14.1
+scraperwiki==0.5.1
+bs4==0.0.1
+beautifulsoup4==4.7.1
