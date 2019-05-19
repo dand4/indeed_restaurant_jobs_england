@@ -1,11 +1,10 @@
-import requests
-from bs4 import BeautifulSoup
 import scraperwiki
+from bs4 import BeautifulSoup
+import requests as rqs
 from datetime import datetime
-import pytz
-
-# import requests
-#import bs4
-#from bs4 import BeautifulSoup
-import pandas as pd
 import time
+import re
+import numpy as np
+from collections import defaultdict
+from collections import OrderedDict
+import unicodecsv as csv
