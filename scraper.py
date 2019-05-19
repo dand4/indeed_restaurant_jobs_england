@@ -24,12 +24,12 @@ EXECTIME = datetime.now()
 
 def get_job_url(what = WHAT, where = WHERE, start = 0):
 	"""Return the URL of the Indeed *job* query."""
-	return 'https://www.indeed.hk/jobs?q=' + what.replace(' ', '+') + '&l=' + where.replace(' ', '+') + '&start=' + str(start)
+	return 'https://www.indeed.co.uk/jobs?q=' + what.replace(' ', '+') + '&l=' + where.replace(' ', '+') + '&start=' + str(start)
 
 
 def get_viewjob_url(jk):
 	"""Return the URL of the Indeed *view job* query."""
-	return 'https://www.indeed.hk/viewjob?jk=' + jk
+	return 'https://www.indeed.co.uk/viewjob?jk=' + jk
 
 
 def get_job_soup(what = WHAT, where = WHERE, start = 0):
