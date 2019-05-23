@@ -128,7 +128,7 @@ def get_start_range(what = WHAT, where = WHERE):
 	# Extract total number of jobs found from the search_count string.
 	pattern = r'of\s([0-9,]+)\sjobs$'
 	print(search_count)
-	total_jobs = int(re.findall(pattern, search_count)[0].lstrip())
+	total_jobs = int(re.findall(pattern, search_count)[0].replace(',',''))
 
 	# Set start range.
 	start_range = list(np.arange(0, total_jobs, 10))
