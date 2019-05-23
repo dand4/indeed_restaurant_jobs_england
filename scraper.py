@@ -126,7 +126,8 @@ def get_start_range(what = WHAT, where = WHERE):
 		search_count = content.text.lstrip()
 	#problem area:
 	# Extract total number of jobs found from the search_count string.
-	pattern = r'of\s[0-9,]+jobs$'
+	pattern = r'of\s[0-9,]+\sjobs$'
+	print(search_count)
 	total_jobs = int(re.findall(pattern, search_count)[0].lstrip())
 
 	# Set start range.
